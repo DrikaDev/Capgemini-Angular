@@ -1,0 +1,11 @@
+<!-- adicionar estas informações lá no app.component.html -->
+<h2>Renderizando uma lista de dados:</h2>
+<ul class="lista-produtos">
+    <li *ngFor="let celular of celulares">
+        <strong>{{ celular.nome }}</strong>
+        <p>{{ celular.descricao }}</p>
+        <!-- adicionar a diretiva ngClass com Property Binding: -->
+        <!-- se celular esgotado, acrescenta a class css .esgotado, senão, fica em branco e não adiciona nada -->
+        <span [ngClass]="celular.esgotado ? 'esgotado' : '' ">{{ celular.esgotado ? 'esgotado' : ' disponível' }}</span>
+    </li>
+</ul>

@@ -1,12 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+//aqui é o decorador de pipe:
 @Pipe({
   name: 'multiplicaPor'
 })
 export class MultiplicaPorPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(valor: number, multiplicador: number): unknown {
+    return valor * multiplicador;
   }
 
 }

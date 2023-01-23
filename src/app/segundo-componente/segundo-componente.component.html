@@ -1,4 +1,14 @@
-<h2>Aprendendo sobre templates e pipes no Angular</h2>
-
+<h2>Aprendendo Angular</h2>
+<!-- Property binding:
+é uma forma de associar propriedades entre o template (arquivo html) 
+e o component (arquivo typescript). 
+Essa associação pode ser feita utilizando a sintaxe dos colchetes 
+ou das chaves duplas (interpolação) -->
+<img [src] = "urlImagem" width="200" height="">
 <p>Nome: {{ nome | uppercase }}</p>
 <p>Data de nascimento: {{ dataNascimento | date: "dd/MM/yyyy"}}</p>
+<!-- Event binding: é associação de eventos. 
+Usamos esse recurso para vincular um código da aplicação a um certo 
+evento disparado pelo navegador, por ex um botão - click, chamar o método "mostrarDataNascimento()"
+daí chamar o método lá no segundo-componente.component.ts -->
+<button (click)="mostrarDataNascimento()" type="button">Mostrar data de nascimento</button>
