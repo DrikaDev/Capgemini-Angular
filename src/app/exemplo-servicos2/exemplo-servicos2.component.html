@@ -1,0 +1,7 @@
+<h2>Serviço 02</h2>
+<label for="descricao">Digite a descrição do produto: </label>
+<!-- adicionar o "nome" lá no export do arquivo exemplo-servicos1.component.ts -->
+<input type="text" [(ngModel)]="descricao">
+<!-- adicionar a função adicionarProduto() lá export do arquivo ts -->
+<button type="button" (click)="adicionarProduto()">Adicionar nome</button>
+<button type="button" (click)="this.logger.exibeTodosOsLogs()">Exibe todos os logs</button>
